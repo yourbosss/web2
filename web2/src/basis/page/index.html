@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+
+    <div class="create-note-container">
+        <div class="inputs">
+            <div class="add-inputs">
+                <input type="text" id="title" placeholder="Title...">
+                <input type="text" id="about" placeholder="About...">
+            </div>
+            <div class="add-note">
+                <button id="add-note" class="add-button">+</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div id="task-container" class="task-container">
+            <p id="no-task">No tasks</p>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <div id="window-delete" class="window">
+        <div class="window-content">
+            <div class="window-line"></div>
+            <h3>Delete this task?</h3>
+            <button id="confirm-delete">Yes</button>
+            <button id="cancel-delete">No</button>
+        </div>
+    </div>
+
+    <div id="window-edit" class="window-edit">
+        <div class="window-content">
+            <input type="text" id="tittle-edit" placeholder="Task Title..." />
+            <textarea id="desc-edit" placeholder="Task body about this task..."></textarea>
+            <div class="window-buttons">
+                <button id="cancel-edit">Cancel</button>
+                <button id="save-edit">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="window-share" class="window-share">
+        <div class="window-content">
+            <button id="copy-button"><img src="../icons/copy-modal-share.svg" alt="Копировать" /></button>
+            <button class="icon-button"><img src="../icons/vk-modal-share.svg" alt="Кнопка 1" /></button>
+            <button class="icon-button"><img src="../icons/telegram-modal-share.svg" alt="Кнопка 2" /></button>
+            <button class="icon-button"><img src="../icons/whatsapp-modal-share.svg" alt="Кнопка 3" /></button>
+            <button class="icon-button"><img src="../icons/facebook-modal-share.svg" alt="Кнопка 4" /></button>
+        </div>
+    </div>
+
+    <div id="window-info" class="window-info">
+        <div class="window-content">
+            <img src="" alt="Информация" class="info-gif" />
+        </div>
+    </div>
+     <script src="../script/script.js"></script>
+</body>
+</html>

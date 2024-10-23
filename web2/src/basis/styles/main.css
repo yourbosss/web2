@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    font-family: "Roboto-Regular";
+    background-color: #1B1A17;
+    color: #F0E3CA;
+}
+
+.add-button {
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #FF8303;
+    background-color: transparent;
+    color: #FF8303;
+    border-radius: 10px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #1F1E1B;
+}
+
+.delete-button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #A35709;
+    border-radius: 5px;
+    background-color: #1B1A17;
+    color: #FF8303;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #1F1E1B;
+}
+
+.task-button {
+    margin: right;
+    background-color: transparent;
+    border: 2px solid #A35709;
+    color: #F0E3CA;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+}
+
+.task-button:hover {
+    background-color: #1F1E1B;
+}
+
+.task-button .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.window {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.window .window-content {
+    background-color: #1B1A17;
+    color: #F0E3CA;
+    padding-bottom: 2%;
+    margin: 15% auto;
+    text-align: center;
+    width: 50%;
+}
+
+.window .window-content h3 {
+    margin-bottom: 5%;
+}
+
+.window .window-content button {
+    background-color: #1B1A17;
+    color: #F0E3CA;
+    border: 2px solid #A35709;
+    border-radius: 5px;
+    padding: 2% 5%;
+    margin: 0 2%;
+    cursor: pointer;
+}
+
+.window .window-content button:hover {
+    background-color: #1F1E1B;
+}
+
+.window .window-content .window-line {
+    width: 100%;
+    height: 2px;
+    background-color: #A35709;
+    margin-top: -20px;
+}
+
+.window-edit {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.window-edit .window-content {
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    max-width: 600px;
+    background-color: #1B1A17;
+    color: #F0E3CA;
+}
+
+.window-edit .window-content input,
+.window-edit .window-content textarea {
+    width: calc(100% - 20px);
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 5px solid #A35709;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    background-color: #1F1E1B;
+    color: #F0E3CA;
+    resize: none;
+    overflow: hidden;
+}
+
+.window-edit .window-content input:focus,
+.window-edit .window-content textarea:focus {
+    border-color: #FF8303;
+    outline: none;
+}
+
+.window-edit .window-content .window-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.window-edit .window-content .window-buttons button {
+    background-color: #1B1A17;
+    color: #F0E3CA;
+    border: 5px solid #A35709;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 2%;
+    cursor: pointer;
+    transition: background-color 0.5s, border-color 0.5s;
+}
+
+.window-edit .window-content .window-buttons button:hover {
+    background-color: #1F1E1B;
+    border-color: #FF8303;
+}
+
+.window-share {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.window-share .window-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1B1A17;
+    width: 90%;
+    max-width: 600px;
+}
+
+.window-share .window-content button {
+    background: #1F1E1B;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-share .window-content button img {
+    width: 100%;
+    height: 100%;
+}
+
+.window-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.window-info.window-content {
+    background-color: #1B1A17;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.window-info.window-content p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #F0E3CA;
+}
+
+.task-container {
+    width: 100%;
+}
+
+.task {
+    position: relative;
+    background-color: #1F1E1B;
+    border: 2px solid #A35709;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F0E3CA;
+}
+
+.create-note-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.inputs .add-inputs {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.inputs .add-inputs input {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #FF8303;
+    border-radius: 5px;
+    background-color: #1F1E1B;
+    color: #F0E3CA;
+}
+
+.input .add-inputs input:focus {
+    outline: none;
+    background-color: #1B1A17;
+}
+
+.input .add-note {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    height: 2px;
+    width: 130px;
+    background-color: #FF8303;
+    margin: 10px 0;
+    align-self: center;
+}
+
+#no-task {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 140px;
+    position: absolute;
+    right: 10px;
+    max-width: calc(100% - 20px);
+}
+
+/*# sourceMappingURL=main.css.map */
